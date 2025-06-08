@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression Evaluator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">CALCULATOR</h1>
+        
+        <!-- History Section -->
+        <div class="neon-box">
+            <h3 class="section-title">Calculation History</h3>
+            <div class="history-container" id="historyContainer">
+                <ul class="history-list" id="historyList">
+                    <li class="history-empty">No calculations yet</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Input Section -->
+        <div class="neon-box">
+            <h3 class="section-title">Enter Expression</h3>
+            <div class="input-section">
+                <input type="text" class="input-field" id="inputField" placeholder="e.g., (1 + 2) * 3 - 4 / 2">
+            </div>
+            
+            <h3 class="section-title">Result</h3>
+            <div class="result-display" id="resultDisplay">
+                Enter an expression to see the result
+            </div>
+            
+            <h3 class="section-title">Keypad</h3>
+            <div class="keypad">
+                <button class="keypad-btn number" data-value="7">7</button>
+                <button class="keypad-btn number" data-value="8">8</button>
+                <button class="keypad-btn number" data-value="9">9</button>
+                <button class="keypad-btn operator" data-value="/">/</button>
+                
+                <button class="keypad-btn number" data-value="4">4</button>
+                <button class="keypad-btn number" data-value="5">5</button>
+                <button class="keypad-btn number" data-value="6">6</button>
+                <button class="keypad-btn operator" data-value="*">*</button>
+                
+                <button class="keypad-btn number" data-value="1">1</button>
+                <button class="keypad-btn number" data-value="2">2</button>
+                <button class="keypad-btn number" data-value="3">3</button>
+                <button class="keypad-btn operator" data-value="-">-</button>
+                
+                <button class="keypad-btn number" data-value="0">0</button>
+                <button class="keypad-btn number" data-value=".">.</button>
+                <button class="keypad-btn equals" data-action="evaluate">=</button>
+                <button class="keypad-btn operator" data-value="+">+</button>
+                
+                <button class="keypad-btn special" data-value="(">(</button>
+                <button class="keypad-btn special" data-value=")">)</button>
+                <button class="keypad-btn special" data-action="clear">C</button>
+                <button class="keypad-btn special" data-action="backspace">←</button>
+            </div>
+            
+            <button class="evaluate-btn" id="evaluateBtn">EVALUATE</button>
+        </div>
+        
+        <!-- Clear Buttons Section -->
+        <div class="neon-box">
+            <div class="clear-section">
+                <button class="clear-btn" id="clearAllBtn">Clear All</button>
+                <button class="clear-btn" id="clearHistoryBtn">Clear History</button>
+                <button class="clear-btn" id="clearInputBtn">Clear Input</button>
+            </div>
+        </div>
+        
+        <!-- Instructions Section -->
+        <div class="neon-box">
+            <div class="instructions">
+                <h3>Instructions & Examples</h3>
+                <p>
+                    • Sample expressions: 1+2+3 = 6, 5+2-3 = 4, 5*2-4 = 6<br>
+                    • Supported operators: +, -, *, /, ( )<br>
+                    • Use parentheses to group operations<br>
+                    • Use keypad or type directly in the input field<br>
+                    • Press Enter, click Evaluate, or use '=' button to calculate<br>
+                    • Examples: (1+2)*3, 10/2-1, 2*(3+4)/7
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
